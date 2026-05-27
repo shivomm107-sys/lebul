@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Budget Trails AU — local budget guide for Australia</title>
-<meta name="description" content="Budget Trails AU: practical, original tips to plan an affordable trip in Australia.">
+<title>Stay — Budget Trails AU</title>
+<meta name="description" content="Areas by vibe in Australia with typical costs and a picker tool.">
 <link rel="preload" href="assets/styles.css" as="style">
 <link rel="stylesheet" href="assets/styles.css">
 <script defer src="assets/site.js"></script>
@@ -39,24 +39,30 @@
     Local guide: Kai Turner — contact <a href="mailto:hello@budgettrails.au">hello@budgettrails.au</a>, <a href="tel:+61 2 5550 1234">+61 2 5550 1234</a> — ID: ABN 12 345 678 910 (sample)
   </div>
 </header>
-<nav class="breadcrumb" aria-label="Breadcrumb"><ol><li aria-current="page">Home</li></ol></nav>
+<nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Stay</li></ol></nav>
 <main id="main" class="container">
 
-<section class="hero splash reveal">
-  <h1>Cheap budget tour Australia: plan a smarter trip</h1>
-  <p>Build a realistic daily budget, pick the right areas to stay, and choose transport without surprises. Budget Trails AU is a lightweight local guide with practical, honest pricing.</p>
-  <p><a class="btn" href="costs.html">Build my budget plan</a> <a class="btn ghost" href="start-here.html">Start here</a></p>
-  <div class="trust" style="margin-top: 1rem;">
-    <span class="badge" style="background:rgba(255,255,255,.1); border-color:rgba(255,255,255,.4); color:white;">Original content</span>
-    <span class="badge" style="background:rgba(255,255,255,.1); border-color:rgba(255,255,255,.4); color:white;">Ads‑safe</span>
-    <span class="badge" style="background:rgba(255,255,255,.1); border-color:rgba(255,255,255,.4); color:white;">Accessibility‑first</span>
+<h1>Where to stay in Australia: areas by vibe</h1>
+<p class="lead">Pick an area that matches your pace. Use the Neighborhood Picker to filter by vibe and typical nightly prices.</p>
+<section class="card">
+  <h2>Neighborhood Picker</h2>
+  <div class="picker">
+    <label>Vibe
+      <select id="vibeFilter"><option value="">Any</option><option>central</option><option>creative</option><option>beach</option></select>
+    </label>
+    <label>Max nightly budget (AUD)
+      <input type="number" id="priceFilter" min="0" step="10" placeholder="e.g., 180">
+    </label>
+    <button class="btn" id="applyPicker">Apply</button>
   </div>
+  <div id="neighborhoodResults" class="list-cards"></div>
 </section>
-<section class="grid two reveal">
-  <a class="card" href="stay.html"><h2>Stay</h2><p>Areas by vibe with pros/cons and typical costs.</p></a>
-  <a class="card" href="transport.html"><h2>Transport</h2><p>Airport to city, passes, and late‑night options.</p></a>
-  <a class="card" href="things-to-do.html"><h2>Things to Do</h2><p>Start with free/cheap ideas, then highlights.</p></a>
-  <a class="card" href="food.html"><h2>Food</h2><p>Local dishes, markets, and hygiene tips.</p></a>
+<section class="card">
+  <h2>Pros and cons</h2>
+  <table class="striped">
+    <thead><tr><th>Area</th><th>Pros</th><th>Cons</th></tr></thead>
+    <tbody id="areaMatrix"></tbody>
+  </table>
 </section>
 
 <section class="card">
@@ -108,9 +114,9 @@
 </section>
 
 
-<section class="card notice info">
+<section class="card">
   <h2>Quick checklist</h2>
-  <ul class="checklist"><li>Check passport validity 6+ months</li><li>Card with no FX fees</li><li>Download offline maps</li><li>Save hotel address in local language</li></ul>
+  <ul class="checklist"><li>Check late check‑in policy</li><li>Ask for quiet room away from lift</li><li>Confirm luggage storage</li></ul>
 </section>
 
 
